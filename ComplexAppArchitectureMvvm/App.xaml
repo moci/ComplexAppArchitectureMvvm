@@ -1,0 +1,30 @@
+﻿<Application x:Class="ComplexAppArchitectureMvvm.App"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:local="clr-namespace:ComplexAppArchitectureMvvm"
+						 xmlns:vm="clr-namespace:ComplexAppArchitectureMvvm.ViewModels"
+						 xmlns:v="clr-namespace:ComplexAppArchitectureMvvm.Views"
+						 DispatcherUnhandledException="DispatcherUnhandledException_Handler"
+						 ShutdownMode="OnMainWindowClose">
+	<Application.Resources>
+		<ResourceDictionary>
+			<Style TargetType="{x:Type Window}">
+				<Setter Property="UseLayoutRounding"
+								Value="True"/>
+			</Style>
+			
+			<DataTemplate DataType="{x:Type vm:LoadingViewModel}">
+				<v:LoadingView />
+			</DataTemplate>
+			<DataTemplate DataType="{x:Type vm:HubViewModel}">
+				<v:HubView />
+			</DataTemplate>
+			<DataTemplate DataType="{x:Type vm:UnloadingViewModel}">
+				<v:UnloadingView />
+			</DataTemplate>
+			<DataTemplate DataType="{x:Type vm:ActionsViewModel}">
+				<v:ActionsView />
+			</DataTemplate>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

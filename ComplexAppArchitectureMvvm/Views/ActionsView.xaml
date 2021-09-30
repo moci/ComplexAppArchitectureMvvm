@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ComplexAppArchitectureMvvm.Views.ActionsView"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+						 xmlns:local="clr-namespace:ComplexAppArchitectureMvvm.Views"
+						 mc:Ignorable="d" 
+						 d:DataContext="{d:DesignInstance {x:Type local:ActionsDesignData}, IsDesignTimeCreatable=True}">
+	<StackPanel HorizontalAlignment="Center"
+								VerticalAlignment="Center">
+		<Button Content="Action A"
+						Command="{Binding ActionACmd}"/>
+		<Button Content="Action B"
+						Command="{Binding ActionBCmd}"/>
+		<Button Content="To hub"
+						Command="{Binding ToHubCmd}"/>
+	</StackPanel>
+</UserControl>
